@@ -1,65 +1,77 @@
 import React from 'react'
-import { Button, StyleSheet, Text, TextInput, TouchableOpacity,View } from 'react-native'
+import { Button, StyleSheet, Text, TextInput, TouchableOpacity, View, StatusBar } from 'react-native'
 
 export default function ChangePaswword() {
     return (
-       <View>
-           <View style={style.input}>
-<TextInput placeholder="Enter current password">
+        <View style={style.container}>
+            <StatusBar backgroundColor="#fff" barStyle="dark-content"></StatusBar>
+            <View style={style.input}>
+                <TextInput placeholder="Enter current password"
+                    secureTextEntry
+                    keyboardType="numbers-and-punctuation"
+                >
 
-</TextInput>
+                </TextInput>
 
-           </View>
-           <View style={style.input}>
-<TextInput placeholder="Enter new password">
+            </View>
+            <View style={style.input}>
+                <TextInput placeholder="Enter new password"
+                    secureTextEntry
+                    keyboardType="numbers-and-punctuation"
+                >
 
-</TextInput>
+                </TextInput>
 
-           </View>
-           <View style={style.input}>
-<TextInput placeholder="Confirm new password">
+            </View>
+            <View style={style.input}>
+                <TextInput placeholder="Confirm new password"
+                    secureTextEntry
+                    keyboardType="numbers-and-punctuation"
+                >
 
-</TextInput>
+                </TextInput>
 
-           </View>
-         
-<TouchableOpacity style={style.btn}>
-    <Text
-    style={style.text}
-    >Change</Text>
-    </TouchableOpacity>
- </View>
+            </View>
+
+            <TouchableOpacity style={style.btn}>
+                <Text
+                    style={style.text}
+                >Change</Text>
+            </TouchableOpacity>
+        </View >
     )
 }
-const  style=StyleSheet.create({
-    container:{
-        flex:1,
-        justifyContent:'center',
-        padding:20,
-        alignContent:"center",
-        paddingLeft:60,
-        paddingRight:60
+const style = StyleSheet.create({
+    container: {
+        flex: 1,
+        justifyContent: 'center',
+        padding: 20,
+        alignContent: "center",
+        paddingLeft: 30,
+        paddingRight: 30,
+        backgroundColor: "#fff"
     },
-    input:{
-        borderWidth:1,
-        borderRadius:20,
-        height:50,
-        justifyContent:"center",
-        marginBottom:10
+    input: {
+        borderBottomWidth: 1,
+
+        height: 50,
+        justifyContent: "center",
+        marginBottom: 10
 
 
     },
-    btn:{
-        width:100,
-        height:50,
-        backgroundColor:"red",
-        alignSelf:"center",
-        borderRadius:15,
-        textAlign:"center",
-        justifyContent:"center"
+    btn: {
+        width: 200,
+        height: 50,
+        backgroundColor: "#FF6347",
+        alignSelf: "center",
+        borderRadius: 15,
+        textAlign: "center",
+        justifyContent: "center"
     },
-    text:{
-        color:'#fff',
-        fontSize:15
+    text: {
+        color: '#fff',
+        fontSize: 20,
+        alignSelf: "center",
     }
 })

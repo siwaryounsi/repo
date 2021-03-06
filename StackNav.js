@@ -7,15 +7,15 @@ import ChangePaswword from './ChangePaswword';
 import EditProfile from './EditProfile';
 const Stack = createStackNavigator();
 function StackNav() {
-    return (
-      <NavigationContainer>
-        <Stack.Navigator initialRouteName="profile">
-          <Stack.Screen name="profile" component={ProfileScreen} />
-          <Stack.Screen name="Change Password" component={ChangePaswword} />
-          <Stack.Screen name="Edit Profile" component={EditProfile} />
-        </Stack.Navigator>
-      </NavigationContainer>
-    );
-  }
-  
-  export default StackNav;
+  return (
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Profile">
+        <Stack.Screen name="Profile" component={ProfileScreen} />
+        <Stack.Screen name="Change Password" component={ChangePaswword} />
+        <Stack.Screen name="Edit Profile" component={EditProfile} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+}
+
+export default StackNav;

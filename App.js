@@ -3,10 +3,14 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import ProfileScreen from './ScreenProfile';
 import StackNav from './StackNav';
-
+import { store } from './Redux/Store';
+import { Provider } from 'react-redux';
 export default function App() {
   return (
-<StackNav/>
+    <Provider store={store}>
+      <StackNav />
+    </Provider >
+
   );
 }
 
